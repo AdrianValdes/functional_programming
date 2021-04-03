@@ -25,3 +25,8 @@ const modulo = curry((x, y) => y % x);
 const isOdd = modulo(2);
 
 console.log(isOdd(2)); // 0 => false; 1 => true
+
+//filter
+const filter = curry((f, xs) => xs.filter(f));
+const getOdds = filter(isOdd);
+console.log(getOdds([1, 2, 3, 4, 5, 6, 7]));
