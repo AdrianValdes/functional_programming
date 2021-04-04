@@ -1,4 +1,5 @@
-const { compose, curry, last, prop } = require('ramda');
+const R = require('ramda');
+const _ = R;
 
 const toUpper = (str) => str.toUpperCase();
 const exclaim = (str) => str + '!';
@@ -6,8 +7,8 @@ const first = (xs) => xs[0];
 
 const basicCompose = (f, g) => (x) => f(g(x));
 
-const log = curry((tag, x) => (console.log(tag, x), x));
-const shout = compose(exclaim, toUpper);
+const log = _.curry((tag, x) => (console.log(tag, x), x));
+const shout = _.compose(exclaim, toUpper);
 // console.log(shout('books'));
 
 // Example Data
@@ -49,5 +50,11 @@ const CARS = [
 //   return _.prop('in_stock', reversed_cars);
 // };
 
-const istLastInStock = compose(prop('in_stock'), last);
+const istLastInStock = _.compose(_.prop('in_stock'), _.last);
 console.log(istLastInStock(CARS));
+
+// Exercise 2:
+// ============
+// use _.compose(), _.prop() and _.head() to retrieve the name of the first car
+const nameOfFirstCar = _.compose(_.prop('name'), _.head);
+console.log(nameOfFirstCar(CARS));
