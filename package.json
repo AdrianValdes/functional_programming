@@ -1,0 +1,23 @@
+{
+  "name": "functional_programming",
+  "version": "1.0.0",
+  "description": "",
+  "main": "composition.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdrianValdes/functional_programming.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdrianValdes/functional_programming/issues"
+  },
+  "homepage": "https://github.com/AdrianValdes/functional_programming#readme",
+  "dependencies": {
+    "ramda": "^0.27.1"
+  }
+}
