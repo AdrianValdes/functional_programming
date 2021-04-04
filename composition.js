@@ -58,3 +58,13 @@ console.log(istLastInStock(CARS));
 // use _.compose(), _.prop() and _.head() to retrieve the name of the first car
 const nameOfFirstCar = _.compose(_.prop('name'), _.head);
 console.log(nameOfFirstCar(CARS));
+
+// Exercise 4:
+// ============
+// Write a function: sanitizeNames()
+// using compose that returns a list of lowercase
+// and underscored names: e.g: sanitizeNames(["Hello World"]) //=> ["hello_world"].
+const _underscore = _.replace(/\W+/g, '_');
+
+const sanitizeNames = _.map(_.compose(_.toLower, _underscore, _.prop('name')));
+// console.log(sanitizeNames(CARS));
