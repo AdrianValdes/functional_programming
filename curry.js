@@ -51,4 +51,4 @@ const keepHighest = (x, y) => (x >= y ? x : y); // <- leave be
 
 const reduce = curry((fn, xs) => xs.reduce(fn));
 const max = reduce(keepHighest);
-console.log(max([323, 523, 554, 123, 5234]));
+// console.log(max([323, 523, 554, 123, 5234]));
