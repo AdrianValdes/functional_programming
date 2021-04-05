@@ -59,7 +59,7 @@ console.log(istLastInStock(CARS));
 const nameOfFirstCar = _.compose(_.prop('name'), _.head);
 console.log(nameOfFirstCar(CARS));
 
-// Exercise 4:
+// Exercise 3:
 // ============
 // Write a function: sanitizeNames()
 // using compose that returns a list of lowercase
